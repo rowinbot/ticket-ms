@@ -112,7 +112,7 @@ export function EventList({
         <li ref={controlElementRef}></li>
       </ul>
 
-      {isFetching && <div>Loading...</div>}
+      {isFetching && <p>Loading...</p>}
     </div>
   );
 }

@@ -23,8 +23,11 @@
     "noUncheckedSideEffectImports": true,
 
     "paths": {
-      "~/*": ["./src/*"]
-    }
+      "~/*": ["./src/*"],
+      "~tests/*": ["./tests/*"]
+    },
+
+    "types": ["vitest"]
   },
   "include": ["src"]
 }
