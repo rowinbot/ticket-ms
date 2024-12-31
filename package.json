@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Ticket Management System",
   "scripts": {
-    "dev": "turbo dev"
+    "dev": "turbo dev",
+    "setup": "bash -c './scripts/setup.sh'"
   },
   "author": "rowinbot (rowinkaleb@gmail.com)",
   "license": "MIT",
