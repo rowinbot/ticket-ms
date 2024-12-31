@@ -1,0 +1,17 @@
+{
+  "name": "@ticket-ms/monorepo",
+  "version": "1.0.0",
+  "description": "Ticket Management System",
+  "scripts": {
+    "dev": "turbo dev"
+  },
+  "author": "rowinbot (rowinkaleb@gmail.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@9.10.0",
+  "dependencies": {
+    "turbo": "^2.3.3"
+  }
+}

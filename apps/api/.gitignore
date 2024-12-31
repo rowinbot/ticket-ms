@@ -1,0 +1,9 @@
+node_modules
+.env
+.env.development
+.env.production
+.serverless/*
+dist
+
+# Local PG data
+/data

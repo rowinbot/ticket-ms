@@ -1,0 +1,15 @@
+{
+  "vueIndentScriptAndStyle": false,
+  "trailingComma": "all",
+  "cursorOffset": -1,
+  "endOfLine": "lf",
+  "proseWrap": "preserve",
+  "insertPragma": false,
+  "printWidth": 80,
+  "rangeStart": 0,
+  "requirePragma": false,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleAttributePerLine": false,
+  "embeddedLanguageFormatting": "auto"
+}
