@@ -25,15 +25,18 @@ export class EventController extends AppController {
         z.object({
           query: z.object({
             userType: z.nativeEnum(EventUserType),
-            page: z.string().transform((v) => parseInt(v, 10)),
+            cursor: z.string().transform((v) => parseInt(v, 10)),
             pageSize: z.string().transform((v) => parseInt(v, 10)),
+            title: z.string().optional(),
+            description: z.string().optional(),
           }),
         }),
       );
 
       const list = await this.service.getUpcomingEvents(
-        { page: query.page, pageSize: query.pageSize },
+        { cursor: query.cursor, pageSize: query.pageSize },
         query.userType,
+        { title: query.title, description: query.description },
       );
 
       return res.status(200).json(list);

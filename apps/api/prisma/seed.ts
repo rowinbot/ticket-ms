@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 faker.company.name();
 
 const events: Omit<Event, "id" | "updated_at" | "created_at">[] = Array.from(
-  { length: 100 },
+  { length: 300 },
   () => ({
     title: faker.company.name(),
     description: faker.lorem.paragraph(5),

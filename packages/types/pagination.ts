@@ -1,4 +1,4 @@
 export interface PaginationRequest {
-  page: number;
+  cursor: number;
   pageSize: number;
 }

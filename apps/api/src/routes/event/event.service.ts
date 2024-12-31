@@ -1,11 +1,12 @@
 import { AppService } from "../../utils/app-service.ts";
 import { type EventDTO, EventUserType } from "@ticket-ms/types/events.ts";
-import type { PaginationRequest } from "@ticket-ms/types/pagination.ts";
+import { type PaginationRequest } from "@ticket-ms/types/pagination.ts";
 
 export class EventService extends AppService {
   async getUpcomingEvents(
     pagination: PaginationRequest,
     userType: EventUserType,
+    search: { title?: string; description?: string },
   ): Promise<EventDTO[]> {
     const db = await this.getDb();
 
@@ -13,6 +14,13 @@ export class EventService extends AppService {
       where: {
         date: {
           gte: new Date(),
+        },
+        // TODO: implement fuzzy search instead
+        title: {
+          contains: search.title,
+        },
+        description: {
+          contains: search.description,
         },
       },
       select: {
@@ -23,7 +31,7 @@ export class EventService extends AppService {
         date: true,
         location: true,
       },
-      skip: pagination.page * pagination.pageSize,
+      skip: pagination.cursor,
       take: pagination.pageSize,
     });
 
